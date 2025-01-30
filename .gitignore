@@ -1,0 +1,11 @@
+.gradle/
+Datasets
+Datasets_without_relevancyValues
+GenDatasets
+gradle/
+.idea/
+build/
+Datasets/*
+lib/*
+Results/*
+.log

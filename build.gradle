@@ -1,0 +1,36 @@
+buildscript {
+    ext.kotlin_version = '1.4.10'
+}
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id 'java-library'
+}
+apply plugin: 'application'
+mainClassName = "Main"
+
+group 'org.eea'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.7"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation('org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0')
+    implementation("de.unknownreality:dataframe:0.7.6")
+    implementation("org.slf4j:slf4j-api:2.0.0-alpha1")
+    implementation("org.slf4j:slf4j-simple:2.0.0-alpha1")
+    implementation("com.github.jbytecode:RCaller:3.0")
+    implementation files('lib/weka.jar')
+    implementation files('lib/guava-20.0.jar')
+    implementation files('lib/jCOLIBRI2.jar')
+    implementation files('lib/moa.jar')
+//    implementation files('lib/MOAReduction.jar')
+}
+
